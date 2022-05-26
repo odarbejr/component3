@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+<script src="assets/js/header.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+    .tablink {
+        background-color: #93D54C;
+        color: #000;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 425px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        
+    }
+
+    .tablink:active {
+        color: white;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        background-color: #F1F1F1;
+        display: none;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <!-- -------------------------------------------
+        header dynamic layout Section to see content 
+        header.js
+    ------------------------------------------------>
+    <div class="headerContent"></div>
+    <div class="headerChangeMenu"></div>
+    <div class="headContentSubMenu"></div>
+    
+    
+
+    <div class="container-xxl pt-5 ">
+        <div class="row pl-5">
+            <div class="col-lg-12 col-md-12">
+                <!-- DIRECTORATE SECTION ========================================================= -->
+                <div style="margin-bottom:54px;">
+                    <button class="tablink" style="margin-right: 10px;" onclick="openCity('human-resources', this, '#F1F1F1')" id="defaultOpen"><b>HUMAN RESOURCES</b></button>
+                    <button class="tablink" style="margin-right: 10px;" onclick="openCity('training-extention-facilities', this, '#F1F1F1')"><b>TRAINING AND EXTENSION FACILITIES</b></button>
+                    <button class="tablink" onclick="openCity('AFE', this, '#F1F1F1')"><b>AFE-RELATED DOCUMENTS</b>
+                    </button>
+                </div>
+                <!-- human-resources division section================================================== -->
+                <div id="human-resources" class="tabcontent">
+                    <div class="table-responsive-xxl">
+                        <table class="table table-bordered p-0">
+                            <thead class="th-bg">
+                                <tr>
+                                    <th style="width:25%;"><span class="xy">Area of Specialization</span> 
+                                    </th>
+                                    <th style="width:25%;"><span class="xy">Discipline</span></th>
+                                    <th style="width:22%;">Number of Personnel
+                                        <div class="container p-1 pb-0" style="margin-left: 0px;">
+                                        <div class="row" id="rowContent-personel">
+                                            <div class="col-4 th-number-personel-partition">BS</div>
+                                            <div class="col-4 th-number-personel-partition">MS</div>
+                                            <div class="col-4 th-number-personel-partition">PHD</div>
+                                        </div></div>
+                                    </th>
+                                    <th style="width:12%;"><span class="xy">Total Number</span></th>
+                                    <th style="width:16%;"></th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody class="td-bg">
+                                <tr>
+                                    <td style="border-bottom:0;border-left:0;height:120px;">Agriculture
+                                        <div class="pt-4">
+                                            <select class="form-select agency-input text-center ">
+                                                <option selected></option>
+                                                <option value="1">Landline</option>
+                                                <option value="2">Mobile</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td style="height:120px;">Agronomy
+                                        <div class="pt-4">
+                                            <select class="form-select agency-input text-center ">
+                                                <option selected></option>
+                                                <option value="1">Landline</option>
+                                                <option value="2">Mobile</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td style="height:120px;">
+                                        <div class="container p-1 pb-0" style="margin-left: 0px;margin-top: 0;">
+                                            <div class="row mb-0 p-0" id="td-rowContent-personel">
+                                                <div class="col-4 td-number-personel-partition">5</div>
+                                                <div class="col-4 td-number-personel-partition">2</div>
+                                                <div class="col-4 td-number-personel-partition">1</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="height:120px;">
+                                        <div class="pt-5">
+                                            <select class="form-select agency-input text-center ">
+                                                <option selected></option>
+                                                <option value="1">Landline</option>
+                                                <option value="2">Mobile</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td style="height:120px;border-right:0;">
+                                        <button class="btn">
+                                            <i class="fa fa-edit" aria-hidden="true"></i></i>
+                                        </button>
+                                        <button class="btn">
+                                            <i class="fa fa-trash" aria-hidden="true"></i></i>
+                                        </button>
+                                        <button class="btn">
+                                            <i class="fa fa-plus" aria-hidden="true"></i></i>
+                                        </button>
+                                        <div class="pt-4" >
+                                            <div style="background-color:#D8D8D8">
+                                                <button class="btn">
+                                                    <i class="fa fa-check" aria-hidden="true"></i></i>
+                                                </button>
+                                                <button class="btn">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- training-extention-facilities division section================================================== -->
+                <div id="training-extention-facilities" class="tabcontent">
+                    <div class="d-flex justify-content-end mb-3">
+                        <button type="button" onclick="btnAddTrainingExtention()" class="btnAdd2" >
+                            <i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                    </div>
+                    <div class="table-responsive-xxl">
+                        <table class="table table-bordered p-0">
+                            <thead class="th-bg">
+                                <tr>
+                                    <th class="p-3" style="width:35%">FACILITY</th>
+                                    <th class="p-3" style="width:35%">TYPE OF FACILITY</th>
+                                    <th class="p-3" style="width:30%">LOCATION</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody class="td-bg">
+                                <tr>
+                                    <td class="pt-3" style="border-bottom:0;border-left:0;height:200px;">Training Hall 1</td>
+                                    <td class="pt-3">Function Hall</td>
+                                    <td class="pt-3">ATI Compound, Diliman, Quezon City</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- AFE division section================================================== -->
+                <div id="AFE" class="tabcontent">
+                    <div class="d-flex justify-content-end mb-3">
+                        <button type="button" onclick="getLinkAdd()" class="btnAdd2" >
+                            <i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                    </div>
+                    <div class="table-responsive-xxl">
+                        <table class="table table-bordered p-0">
+                            <thead class="th-bg">
+                                <tr>
+                                    <th class="p-3" style="width:15%">TITLE</th>
+                                    <th class="p-3" style="width:20%">TYPE OF DOCUMENT</th>
+                                    <th class="p-3" style="width:20%">DATE PUBLISHED/DEVELOPED</th>
+                                    <th class="p-3" style="width:20%">AUTHOR</th>
+                                    <th class="p-3" style="width:25%">DOCUMENT CODE</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody class="td-bg">
+                                <tr>
+                                    <td class="pt-3" style="border-bottom:0;border-left:0;height:200px;">ATI Operations Manual
+                                        <div class="pt-4">Evaluation of the ATI’s Learning Site Program in Luzon and Visayas</div>
+                                    </td>
+                                    <td class="pt-3">Operations Manual
+                                        <div class="pt-4">Policy Brief</div>
+                                    </td>
+                                    <td class="pt-3">2022
+                                        <div class="pt-4">Function Hall and Dormitory</div>
+                                    </td>
+                                    <td class="pt-3">ATI
+                                        <div class="pt-4">Policy and Planning Division
+                                        </div>
+                                    </td>
+                                    <td class="pt-3">ISBN: 978-971-9673-67-5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // herefor get location pages
+        function getLinkAdd() {
+            location.href = "afe-add.html";
+        }
+        function btnAddTrainingExtention() {
+            location.href = "training-extention-facilities-add.html";
+        }
+    </script>
+    <script>
+        function openCity(cityName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(cityName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
